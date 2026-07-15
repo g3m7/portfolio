@@ -493,8 +493,6 @@ section, .nav, .project-card, .cert-card, .tag, .hero{
 }
 
 /* ===== Scroll reveal ===== */
-.reveal{ opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
-.reveal.is-visible{ opacity: 1; transform: translateY(0); }
 
 /* ===== Responsive ===== */
 @media (max-width: 860px){
@@ -511,4 +509,77 @@ section, .nav, .project-card, .cert-card, .tag, .hero{
 @media (max-width: 560px){
   .cert-grid{ grid-template-columns: 1fr; }
   .contact-inner{ align-items: flex-start; }
+}
+
+/* ===== Scroll reveal ===== */
+.reveal{ opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.is-visible{ opacity: 1; transform: translateY(0); }
+
+/* ===== Language Toggle ===== */
+.lang-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px;
+  background: var(--surface);
+  margin-right: 10px;
+}
+.lang-toggle button{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  width: 30px;
+  height: 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink-muted);
+  transition: background .2s ease, color .2s ease;
+}
+.lang-toggle button.is-active{
+  background: var(--ink);
+  color: var(--bg);
+}
+
+/* ===== RTL / Arabic support ===== */
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .hero-role,
+html[dir="rtl"] .project-code,
+html[dir="rtl"] .project-brief,
+html[dir="rtl"] .tl-date,
+html[dir="rtl"] .cert-tag,
+html[dir="rtl"] .tl-badge,
+html[dir="rtl"] .btn,
+html[dir="rtl"] .nav-cta,
+html[dir="rtl"] .stat-label{
+  font-family: 'Cairo', 'Inter', sans-serif;
+  letter-spacing: 0;
+}
+html[dir="rtl"] .eyebrow{ letter-spacing: 0.02em; }
+html[dir="rtl"] .stats{
+  border-left: none;
+  border-right: 1px solid var(--border);
+  padding-left: 0;
+  padding-right: var(--space-4);
+}
+html[dir="rtl"] .about-copy strong{ font-weight: 700; }
+html[dir="rtl"] .tl-row{
+  grid-template-columns: auto 1fr 140px;
+}
+html[dir="rtl"] .project-link{
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .contact-inner{
+  text-align: right;
+}
+@media (max-width: 860px){
+  html[dir="rtl"] .tl-row{ grid-template-columns: 1fr; }
 }
