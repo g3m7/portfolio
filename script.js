@@ -104,7 +104,7 @@ const translations = {
     "contact.heading": "Let's build something.",
     "contact.downloadCv": "Download CV (PDF)",
     "footer.name": "© 2026 Mohammed Al-Jazzar",
-    "footer.location": "Sheikh Zayed City, Egypt"
+    "footer.location": "Giza, Egypt"
   },
   ar: {
     "nav.about": "نبذة عني",
@@ -168,7 +168,7 @@ const translations = {
     "contact.heading": "يلا نبني حاجة مع بعض.",
     "contact.downloadCv": "تحميل السيرة الذاتية (PDF)",
     "footer.name": "© 2026 محمد الجزار",
-    "footer.location": "مدينة الشيخ زايد، مصر"
+    "footer.location": "الجيزة ، مصر"
   }
 };
 
